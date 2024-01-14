@@ -24,7 +24,7 @@ if(isset($_POST['submit'])){
 
         $count = $stmt_insert->rowCount();
 
-        $message = "商品を{$count}件を登録しました。";
+        $message = "書籍を{$count}件を登録しました。";
 
         header("Location: read.php?message={$message}");
     } catch (PDOException $e){
@@ -80,7 +80,7 @@ try {
                         <input type="number" name="book_code" min="0" max="100000000" required>
 
                         <label for="book_name">書籍名</label>
-                        <input type="text" name="book_name" max-length="50" required>
+                        <input type="text" name="book_name" maxlength="50" required>
 
                         <label for="price">単価</label>
                         <input type="number" name="price" min="0" max="100000000" required>

@@ -87,7 +87,7 @@ try {
                             <input type="text" class="search-box" placeholder="書籍名で検索" name="keyword" value="<?= $keyword?>">
                         </form>
                     </div>
-                    <a href="create.php" class="btn">商品登録</a>
+                    <a href="create.php" class="btn">書籍登録</a>
                 </div>
                 <table class="books-table">
                     <tr>

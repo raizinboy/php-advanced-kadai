@@ -31,7 +31,7 @@ if(isset($_POST['submit'])){
 
         $count = $stmt_update->rowCount();
 
-        $message = "商品を{$count}件を編集しました。";
+        $message = "書籍を{$count}件を編集しました。";
 
         header("Location: read.php?message={$message}");
     } catch (PDOException $e){
@@ -110,7 +110,7 @@ if (isset($_GET['id'])){
                         <input type="number" name="book_code" min="0" max="100000000" value= "<?= $book['book_code']?>" required>
 
                         <label for="book_name">書籍名</label>
-                        <input type="text" name="book_name" max-length="50" value="<?= $book['book_name'] ?>" required>
+                        <input type="text" name="book_name" maxlength="50" value="<?= $book['book_name'] ?>" required>
 
                         <label for="price">単価</label>
                         <input type="number" name="price" min="0" max="100000000" value="<?= $book['price'] ?>" required>
